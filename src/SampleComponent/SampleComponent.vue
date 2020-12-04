@@ -1,6 +1,6 @@
 <template>
   <div class="sample-component-container">
-sdffsfsdfsd
+sample
   </div>
 </template>
 

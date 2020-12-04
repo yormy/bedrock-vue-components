@@ -7,7 +7,12 @@ npm run build
 ```
 
 # Publish
-Make account on https://www.npmjs.com
+### setup for npm
+``` 
+npm adduser
+```
+
+### publish
 ```
 npm publish
 ```
