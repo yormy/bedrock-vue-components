@@ -9,12 +9,12 @@
   "license": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yormy/bedrock-vue-component.git"
+    "url" : "git+https://github.com/yormy/bedrock-vue-components.git"
   },
   "bugs": {
-    "url": "https://github.com/yormy/bedrock-vue-component/issues"
+    "url": "https://github.com/yormy/bedrock-vue-components/issues"
   },
-  "homepage": "https://github.com/yormy/bedrock-vue-component#readme",
+  "homepage": "https://github.com/yormy/bedrock-vue-components#readme",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "scripts": {
