@@ -1,12 +1,35 @@
 # Bedrock Vue Component
 
-
-# Build
+# Installation
+### Use Locally
 ```
+npm i -D ../bedrock-vue-components
+```
+
+### Use Npm version
+```
+npm i -D yormy-bedrock-vue-components
+```
+
+# Using components
+```
+import { HelloComponent } from "bedrock-vu--component";
+
+components: {
+    HelloComponent
+}
+  
+```
+
+# Building & Publishing
+
+## step 1 build the package
+```
+npm install
 npm run build
 ```
 
-# Publish
+## step 2: Publish
 ### setup for npm
 ``` 
 npm adduser
@@ -17,25 +40,6 @@ npm adduser
 npm publish
 ```
 
-# Use Locally
-```
-npm i -D ../bedrock-vue-components
-```
-
-# Use Npm version
-```
-npm i -D yormy-bedrock-vue-components
-```
-
-# Using the components
-```
-import { HelloComponent } from "bedrock-vu--component";
-
-components: {
-    HelloComponent
-}
-  
-```
 
 # Typescript
 ``` 

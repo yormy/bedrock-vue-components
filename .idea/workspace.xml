@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SampleComponent/SampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/SampleComponent/SampleComponent.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,8 @@
       <updated>1607096153082</updated>
       <workItem from="1607096154368" duration="1493000" />
       <workItem from="1607098010991" duration="3176000" />
+      <workItem from="1608381592870" duration="225000" />
+      <workItem from="1609076604027" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>

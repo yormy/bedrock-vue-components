@@ -9,7 +9,7 @@
   "license": "",
   "repository": {
     "type": "git",
-    "url" : "git+https://github.com/yormy/bedrock-vue-components.git"
+    "url": "git+https://github.com/yormy/bedrock-vue-components.git"
   },
   "bugs": {
     "url": "https://github.com/yormy/bedrock-vue-components/issues"
