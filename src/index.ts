@@ -5,6 +5,7 @@ import Datatable from "./Datatable/Datatable.vue";
 
 import ButtonDelete from "./Buttons/ButtonDelete.vue";
 import ButtonSubmit from "./Buttons/ButtonSubmit.vue";
+import ButtonAddModal from "./Buttons/ButtonAddModal.vue";
 
 export {
     SampleComponent,
@@ -13,4 +14,5 @@ export {
     Datatable,
     ButtonDelete,
     ButtonSubmit,
+    ButtonAddModal,
 };

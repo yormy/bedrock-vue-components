@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Buttons/ButtonSubmit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scripts/Filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Datatable/Datatable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datatable/Datatable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableComponent/TableComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableComponent/TableComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +55,7 @@
       <workItem from="1607098010991" duration="3176000" />
       <workItem from="1608381592870" duration="225000" />
       <workItem from="1609076604027" duration="2535000" />
-      <workItem from="1609080054938" duration="7313000" />
+      <workItem from="1609080054938" duration="11121000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609081748704</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added buttondelete and submit">
+      <created>1609143599224</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609143599224</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +124,7 @@
     <MESSAGE value="installation and usage docs updated" />
     <MESSAGE value="WIP" />
     <MESSAGE value="implement filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement filter" />
+    <MESSAGE value="added buttondelete and submit" />
+    <option name="LAST_COMMIT_MESSAGE" value="added buttondelete and submit" />
   </component>
 </project>

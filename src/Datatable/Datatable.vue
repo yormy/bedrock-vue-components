@@ -41,7 +41,15 @@ export default {
 
   methods: {
     addItemToTable(values, item) {
-      return values.push(item);
+      this.backupTable.values = JSON.parse(JSON.stringify(values));
+      values.push(item);
+      return values;
+    },
+
+    updateItemInTable(values, item, findOn) {
+      // NOTE: replacing the item in the array does not trigger a refresh of the table
+      const withoutItem = this.deleteItemFromTable(values, item, findOn);
+      return this.addItemToTable(withoutItem, item)
     },
 
     deleteItemFromTable(values, item, findOn) {
