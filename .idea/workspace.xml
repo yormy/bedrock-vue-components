@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Datatable/Datatable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Datatable/DatatableFilter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Datatable/DatatableSearch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Buttons/ButtonSubmit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scripts/Filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableComponent/RoutesOverview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableComponent/RoutesOverview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Datatable/Datatable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datatable/Datatable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TableComponent/TableComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableComponent/TableComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +32,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Buttons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Buttons" />
+      <recent name="$PROJECT_DIR$/src/Scripts" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/TableComponent" />
       <recent name="$PROJECT_DIR$/src/SampleComponent" />
@@ -55,7 +58,7 @@
       <workItem from="1607098010991" duration="3176000" />
       <workItem from="1608381592870" duration="225000" />
       <workItem from="1609076604027" duration="2535000" />
-      <workItem from="1609080054938" duration="1644000" />
+      <workItem from="1609080054938" duration="7313000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -99,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609079150539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implement filter">
+      <created>1609081748704</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609081748704</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +119,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="installation and usage docs updated" />
     <MESSAGE value="WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
+    <MESSAGE value="implement filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement filter" />
   </component>
 </project>
