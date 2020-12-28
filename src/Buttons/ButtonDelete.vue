@@ -24,7 +24,8 @@
     <button-submit
       :is-loading="isLoading"
       @clicked="askConfirmation"
-      btnClass="btn btn-sm btn-danger"
+      :btnClass="btnClass"
+
     >
       <slot name="button-content">
         <span class="fal fa-fw fa-trash"></span>
@@ -66,6 +67,11 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    btnClass: {
+      type: String,
+      default: 'btn btn-danger'
+    }
   },
 
   data() {

@@ -24,10 +24,12 @@
       </v-card>
     </v-dialog>
 
-    <button-submit :is-loading="isLoading" @clicked="showForm">
+    <button-submit :is-loading="isLoading" @clicked="showForm" :btn-class="btnClass">
       <slot name="button-content">
         <span class="fal fa-plus"></span>
-        {{ $t('misc.add') | capatalizeFirst }}
+        <span v-if="withText">
+          {{ $t('misc.add') | capatalizeFirst }}
+        </span>
       </slot>
     </button-submit>
   </div>
@@ -47,6 +49,15 @@ export default {
     isLoading: {
       type: Boolean,
     },
+
+    withText: {
+      type: Boolean,
+      default: false
+    },
+
+    btnClass : {
+      type: String,
+    }
   },
 
   data() {

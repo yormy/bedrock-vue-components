@@ -135,34 +135,34 @@ export default {
 </script>
 
 
-<style scoped>
-/*!* Hard hide the column of the DUMMY data *!*/
-/*::v-deep .v-data-table__wrapper thead tr th:nth-of-type(7) {*/
-/*    display:none;*/
-/*}*/
-/*::v-deep .v-data-table__wrapper tr td:nth-of-type(7) {*/
-/*    display:none;*/
-/*}*/
+<!--<style scoped>-->
+<!--/*!* Hard hide the column of the DUMMY data *!*/-->
+<!--/*::v-deep .v-data-table__wrapper thead tr th:nth-of-type(7) {*/-->
+<!--/*    display:none;*/-->
+<!--/*}*/-->
+<!--/*::v-deep .v-data-table__wrapper tr td:nth-of-type(7) {*/-->
+<!--/*    display:none;*/-->
+<!--/*}*/-->
 
-::v-deep .v-data-table__wrapper thead tr th.hidden {
-  display: none;
-}
+<!--::v-deep .v-data-table__wrapper thead tr th.hidden {-->
+<!--  display: none;-->
+<!--}-->
 
-::v-deep .v-card__title.danger {
-  background-color: red;
-}
+<!--::v-deep .v-card__title.danger {-->
+<!--  background-color: red;-->
+<!--}-->
 
-::v-deep tr.v-data-table__selected {
-  background: #7d92f5 !important;
-}
+<!--::v-deep tr.v-data-table__selected {-->
+<!--  background: #7d92f5 !important;-->
+<!--}-->
 
-::v-deep tr.v-data-table__expanded__content {
-  background: #c2c0c2 !important;
-  border: none !important;
-  box-shadow: none !important;
-}
+<!--::v-deep tr.v-data-table__expanded__content {-->
+<!--  background: #c2c0c2 !important;-->
+<!--  border: none !important;-->
+<!--  box-shadow: none !important;-->
+<!--}-->
 
-::v-deep .v-data-table-header {
-  background-color:green;
-}
-</style>
+<!--::v-deep .v-data-table-header {-->
+<!--  background-color:green;-->
+<!--}-->
+<!--</style>-->
