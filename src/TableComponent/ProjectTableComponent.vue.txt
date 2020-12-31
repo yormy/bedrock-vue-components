@@ -57,15 +57,15 @@ export default {
         project_name: this.projectName,
       };
 
-      const _this = this;
+      const self = this;
       this.$http
         .put(updateUrl, data)
         .then(() => {
           window.location.href = successUrl;
         })
         .catch((error) => {
-          _this.apiErrors = error.response.data.errors;
-          _this.isSaving = false;
+          self.apiErrors = error.response.data.errors;
+          self.isSaving = false;
         })
         .finally(() => {});
     },

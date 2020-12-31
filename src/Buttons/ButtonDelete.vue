@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { capatalizeFirst } from '../Scripts/Filters.js';
+import { capatalizeFirst } from '../Scripts/Filters';
 import ButtonSubmit from './ButtonSubmit.vue';
 
 export default {
