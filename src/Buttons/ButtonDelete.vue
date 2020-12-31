@@ -13,23 +13,21 @@
         <v-card-actions>
           <v-spacer></v-spacer>
 
-          <v-btn color="green darken-1" text @click="doCancelled"> {{ capatalize($t('misc.cancel'))}} </v-btn>
+          <v-btn color="green darken-1" text @click="doCancelled">
+            {{ capatalize($t('misc.cancel')) }}
+          </v-btn>
 
-          <v-btn color="red darken-1" text @click="doAgreed"> {{ capatalize($t('misc.delete'))}} </v-btn>
+          <v-btn color="red darken-1" text @click="doAgreed">
+            {{ capatalize($t('misc.delete')) }}
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
 
-
-    <button-submit
-      :is-loading="isLoading"
-      @clicked="askConfirmation"
-      :btnClass="btnClass"
-
-    >
+    <button-submit :is-loading="isLoading" @clicked="askConfirmation" :btnClass="btnClass">
       <slot name="button-content">
         <span class="fal fa-fw fa-trash"></span>
-        <span v-if="showText">{{ capatalize($t('misc.delete'))}}</span>
+        <span v-if="showText">{{ capatalize($t('misc.delete')) }}</span>
       </slot>
     </button-submit>
   </div>
@@ -37,10 +35,9 @@
 
 <script>
 import { capatalizeFirst } from '../Scripts/Filters.js';
-import ButtonSubmit from '../Buttons/ButtonSubmit.vue';
+import ButtonSubmit from './ButtonSubmit.vue';
 
 export default {
-
   components: {
     ButtonSubmit,
   },
@@ -70,8 +67,8 @@ export default {
 
     btnClass: {
       type: String,
-      default: 'btn btn-danger'
-    }
+      default: 'btn btn-danger',
+    },
   },
 
   data() {
@@ -94,10 +91,9 @@ export default {
       this.$emit('deleteItem', this.item);
     },
 
-    capatalize(message)
-    {
+    capatalize(message) {
       return capatalizeFirst(message);
-    }
+    },
   },
 };
 </script>

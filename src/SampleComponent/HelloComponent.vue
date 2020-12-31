@@ -1,6 +1,3 @@
 <template>
-  <div class="sample-component-container">
-hello
-  </div>
+  <div class="sample-component-container">hello</div>
 </template>
-

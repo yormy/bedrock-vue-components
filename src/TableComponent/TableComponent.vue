@@ -1,71 +1,68 @@
 <template>
-
   <div>
     <div id="labels_overview_table">
-<!--      <v-card-title>-->
-<!--        &lt;!&ndash;            {{$t('multilingual-admin.label.title')}}&ndash;&gt;-->
-<!--        <v-row>-->
-<!--          <v-col class="d-flex" cols="6">-->
-<!--            <datatable-filter-->
-<!--                :selected.sync="filterOneResults"-->
-<!--                :options="filterOneOptions"-->
-<!--            ></datatable-filter>-->
-<!--          </v-col>-->
+      <!--      <v-card-title>-->
+      <!--        &lt;!&ndash;            {{$t('multilingual-admin.label.title')}}&ndash;&gt;-->
+      <!--        <v-row>-->
+      <!--          <v-col class="d-flex" cols="6">-->
+      <!--            <datatable-filter-->
+      <!--                :selected.sync="filterOneResults"-->
+      <!--                :options="filterOneOptions"-->
+      <!--            ></datatable-filter>-->
+      <!--          </v-col>-->
 
-<!--          <v-col class="d-flex" cols="4">-->
-<!--            <datatable-search :search-input.sync="searchInput"></datatable-search>-->
-<!--          </v-col>-->
-<!--        </v-row>-->
-<!--      </v-card-title>-->
+      <!--          <v-col class="d-flex" cols="4">-->
+      <!--            <datatable-search :search-input.sync="searchInput"></datatable-search>-->
+      <!--          </v-col>-->
+      <!--        </v-row>-->
+      <!--      </v-card-title>-->
 
-<!--      <v-data-table-->
-<!--          :headers="headers"-->
-<!--          :items="datatableValues"-->
-<!--          :search="searchData"-->
-<!--          :custom-filter="filter"-->
-<!--          :items-per-page="10"-->
-<!--          :item-key="datatableKeyField"-->
-<!--          single-select-->
-<!--          class="elevation-1"-->
-<!--          show-expand-->
-<!--      >-->
-<!--          <template v-slot:item.actions="{ item }">-->
-<!--            <button-delete v-show="allowDelete" :item="item" @deleteItem="deleteAgreed(item)">-->
-<!--              <template v-slot:delete-preview>-->
-<!--                {{item.ip}}-->
-<!--&lt;!&ndash;                implement in child&ndash;&gt;-->
-<!--                {{getDeletePreview(item)}}-->
-<!--                </template>-->
-<!--            </button-delete>-->
-<!--          </template>-->
+      <!--      <v-data-table-->
+      <!--          :headers="headers"-->
+      <!--          :items="datatableValues"-->
+      <!--          :search="searchData"-->
+      <!--          :custom-filter="filter"-->
+      <!--          :items-per-page="10"-->
+      <!--          :item-key="datatableKeyField"-->
+      <!--          single-select-->
+      <!--          class="elevation-1"-->
+      <!--          show-expand-->
+      <!--      >-->
+      <!--          <template v-slot:item.actions="{ item }">-->
+      <!--            <button-delete v-show="allowDelete" :item="item" @deleteItem="deleteAgreed(item)">-->
+      <!--              <template v-slot:delete-preview>-->
+      <!--                {{item.ip}}-->
+      <!--&lt;!&ndash;                implement in child&ndash;&gt;-->
+      <!--                {{getDeletePreview(item)}}-->
+      <!--                </template>-->
+      <!--            </button-delete>-->
+      <!--          </template>-->
 
-<!--      </v-data-table>-->
+      <!--      </v-data-table>-->
     </div>
 
+    <!--    <v-data-table-->
+    <!--        :headers="[-->
+    <!--                  { text: '', value: 'ip'},-->
+    <!--                  { text: '', value: 'actions', sortable: false },-->
+    <!--              ]"-->
+    <!--        :items="project.ip_whitelist"-->
+    <!--        :items-per-page="10"-->
+    <!--        class="elevation-1"-->
+    <!--    >-->
+    <!--      <template v-slot:item.actions="{ item }">-->
 
-<!--    <v-data-table-->
-<!--        :headers="[-->
-<!--                  { text: '', value: 'ip'},-->
-<!--                  { text: '', value: 'actions', sortable: false },-->
-<!--              ]"-->
-<!--        :items="project.ip_whitelist"-->
-<!--        :items-per-page="10"-->
-<!--        class="elevation-1"-->
-<!--    >-->
-<!--      <template v-slot:item.actions="{ item }">-->
+    <!--        <button-delete :item="item" @deleteItem="deleteAgreed(item)">-->
+    <!--          <template v-slot:delete-preview>-->
+    <!--            {{item.ip}}-->
+    <!--          </template>-->
+    <!--        </button-delete>-->
 
-<!--        <button-delete :item="item" @deleteItem="deleteAgreed(item)">-->
-<!--          <template v-slot:delete-preview>-->
-<!--            {{item.ip}}-->
-<!--          </template>-->
-<!--        </button-delete>-->
+    <!--      </template>-->
 
-<!--      </template>-->
-
-<!--    </v-data-table>-->
+    <!--    </v-data-table>-->
   </div>
 </template>
-
 
 <script>
 import Datatable from '../Datatable/Datatable.vue';
@@ -84,16 +81,15 @@ export default {
   },
 
   props: {
-      title: {
-        type: String,
-      },
-      datatableValues: {
-        type: Array,
-      },
-      filterMethods: {
-        type: Array,
-      },
-
+    title: {
+      type: String,
+    },
+    datatableValues: {
+      type: Array,
+    },
+    filterMethods: {
+      type: Array,
+    },
   },
 
   data() {
@@ -102,9 +98,9 @@ export default {
       datatableKeyField: 'id',
 
       filterOneResults: null,
-      filterOneOptions: ['blasck','green', 'blueish'],
+      filterOneOptions: ['blasck', 'green', 'blueish'],
 
-      allowDelete : true,
+      allowDelete: true,
     };
   },
 
@@ -117,8 +113,6 @@ export default {
     // getDeletePreview(item) {              // CHILD IMPLEMENTATION
     //   return "SDFfdsfdsfsd: " + item.ip;
     // },
-
-
     // setHeaders() {                // CHILD IMPLEMENTATION
     //   this.headers = [
     //     {
@@ -141,7 +135,6 @@ export default {
     //     } /* add dummy column to be able to additional default filtering on status */,
     //   ];
     // },
-
     // hasFilter() {
     //   // if (this.methodSelected || this.filterWithoutPermissions) {
     //   //   return true;
@@ -220,7 +213,5 @@ export default {
     //       });
     // },
   },
-
-}
+};
 </script>
-

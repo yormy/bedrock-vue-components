@@ -52,12 +52,12 @@ export default {
 
     withText: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
-    btnClass : {
+    btnClass: {
       type: String,
-    }
+    },
   },
 
   data() {

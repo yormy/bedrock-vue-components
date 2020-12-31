@@ -1,61 +1,56 @@
 <template>
-
   <div>
     <v-data-table
-        :headers="[
-                  { text: '', value: 'ip'},
-                  { text: '', value: 'actions', sortable: false },
-              ]"
-        :items="project.ip_whitelist"
-        :items-per-page="10"
-        class="elevation-1"
+      :headers="[
+        { text: '', value: 'ip' },
+        { text: '', value: 'actions', sortable: false },
+      ]"
+      :items="project.ip_whitelist"
+      :items-per-page="10"
+      class="elevation-1"
     >
       <template v-slot:item.actions="{ item }">
-
         <button-delete :item="item" @deleteItem="deleteAgreed(item)">
           <template v-slot:delete-preview>
-            {{item.ip}}
+            {{ item.ip }}
           </template>
         </button-delete>
-
       </template>
-
     </v-data-table>
   </div>
 </template>
 
-
 <script>
-
 export default {
-
   props: {
     project: {
       type: Object,
       required: true,
     },
 
-    toLang : {
+    toLang: {
       type: String,
       required: true,
     },
-
   },
 
   data() {
     return {
       projectName: this.project.name,
 
-      isSaving : false,
+      isSaving: false,
 
-      apiErrors : [],
+      apiErrors: [],
     };
   },
 
   methods: {
     updateProject() {
       this.isSaving = true;
-      const successUrl = this.route('user.multilingual.projects.show', [this.project.xid, this.toLang]);
+      const successUrl = this.route('user.multilingual.projects.show', [
+        this.project.xid,
+        this.toLang,
+      ]);
       const updateUrl = this.route('api.v1.user.multilingual.projects.update', this.project.xid);
 
       const data = {
@@ -64,17 +59,15 @@ export default {
 
       const _this = this;
       this.$http
-          .put(updateUrl, data)
-          .then(() => {
-            window.location.href = successUrl;
-          })
-          .catch((error) => {
-            _this.apiErrors = error.response.data.errors;
-            _this.isSaving = false;
-          })
-          .finally(() => {
-
-          })
+        .put(updateUrl, data)
+        .then(() => {
+          window.location.href = successUrl;
+        })
+        .catch((error) => {
+          _this.apiErrors = error.response.data.errors;
+          _this.isSaving = false;
+        })
+        .finally(() => {});
     },
 
     deleteAgreed(item) {
@@ -91,26 +84,23 @@ export default {
       const url = this.route('api.v1.admin.users.terms.delete', item.xid);
 
       this.$http
-          .delete(url)
-          .then((response) => {
-            if (response.data.success) {
-              this.form.messages.success = response.data.message;
-            } else {
-              this.form.messages.error = response.data.message;
-              this.table.values = this.restoreTable();
-            }
-          })
-          .catch((error) => {
+        .delete(url)
+        .then((response) => {
+          if (response.data.success) {
+            this.form.messages.success = response.data.message;
+          } else {
+            this.form.messages.error = response.data.message;
             this.table.values = this.restoreTable();
-            this.form.messages.error = error.response.data.message;
-          })
-          .finally(() => {
-            this.form.state.isSubmittingRemove = false;
-          });
+          }
+        })
+        .catch((error) => {
+          this.table.values = this.restoreTable();
+          this.form.messages.error = error.response.data.message;
+        })
+        .finally(() => {
+          this.form.state.isSubmittingRemove = false;
+        });
     },
   },
-
-}
+};
 </script>
-
-

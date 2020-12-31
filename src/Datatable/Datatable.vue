@@ -49,7 +49,7 @@ export default {
     updateItemInTable(values, item, findOn) {
       // NOTE: replacing the item in the array does not trigger a refresh of the table
       const withoutItem = this.deleteItemFromTable(values, item, findOn);
-      return this.addItemToTable(withoutItem, item)
+      return this.addItemToTable(withoutItem, item);
     },
 
     deleteItemFromTable(values, item, findOn) {
@@ -133,7 +133,6 @@ export default {
   },
 };
 </script>
-
 
 <!--<style scoped>-->
 <!--/*!* Hard hide the column of the DUMMY data *!*/-->

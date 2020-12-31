@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Datatable/Datatable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datatable/Datatable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +33,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Buttons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Buttons" />
       <recent name="$PROJECT_DIR$/src/Scripts" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/TableComponent" />
-      <recent name="$PROJECT_DIR$/src/SampleComponent" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -55,7 +59,9 @@
       <workItem from="1607098010991" duration="3176000" />
       <workItem from="1608381592870" duration="225000" />
       <workItem from="1609076604027" duration="2535000" />
-      <workItem from="1609080054938" duration="13922000" />
+      <workItem from="1609080054938" duration="15470000" />
+      <workItem from="1609424546416" duration="166000" />
+      <workItem from="1609425137118" duration="390000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -120,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609152305998</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleanup button styles">
+      <created>1609155412081</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609155412081</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +146,7 @@
     <MESSAGE value="implement filter" />
     <MESSAGE value="added buttondelete and submit" />
     <MESSAGE value="add addmodal and replace item in table" />
-    <option name="LAST_COMMIT_MESSAGE" value="add addmodal and replace item in table" />
+    <MESSAGE value="cleanup button styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup button styles" />
   </component>
 </project>
