@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ButtonDelete.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/Filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableComponent/ProjectTableComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableComponent/ProjectTableComponent.vue.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableComponent/RoutesOverview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableComponent/TableComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,10 @@
       <workItem from="1609076604027" duration="2535000" />
       <workItem from="1609080054938" duration="15470000" />
       <workItem from="1609424546416" duration="166000" />
-      <workItem from="1609425137118" duration="812000" />
+      <workItem from="1609425137118" duration="4748000" />
+      <workItem from="1609871547662" duration="25000" />
+      <workItem from="1609877268191" duration="1116000" />
+      <workItem from="1610119581374" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -145,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609425637806</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix linting">
+      <created>1609425959947</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609425959947</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +170,7 @@
     <MESSAGE value="cleanup button styles" />
     <MESSAGE value="add linting" />
     <MESSAGE value="prettier reformat" />
-    <option name="LAST_COMMIT_MESSAGE" value="prettier reformat" />
+    <MESSAGE value="fix linting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix linting" />
   </component>
 </project>

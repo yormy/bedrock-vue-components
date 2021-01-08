@@ -3,7 +3,9 @@
     <v-dialog v-model="addModal" max-width="290">
       <v-card>
         <slot name="modal">
-          <v-card-title class="red headline">{{ $t('misc.add') }}</v-card-title>
+          <v-card-title class="headline" :class="headerClass">
+            <slot name="header"></slot>
+          </v-card-title>
 
           <v-card-text>
             <slot name="form"></slot>
@@ -14,11 +16,11 @@
           <v-spacer></v-spacer>
 
           <v-btn color="green darken-1" text @click="doCancelled">
-            {{ $t('misc.cancel') }}
+            {{ cancelText }}
           </v-btn>
 
           <v-btn color="green darken-1" text @click="doAddItem">
-            {{ $t('misc.add') }}
+            {{ addText }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -28,7 +30,7 @@
       <slot name="button-content">
         <span class="fal fa-plus"></span>
         <span v-if="withText">
-          {{ $t('misc.add') | capatalizeFirst }}
+          {{ addText | capatalizeFirst }}
         </span>
       </slot>
     </button-submit>
@@ -58,6 +60,18 @@ export default {
     btnClass: {
       type: String,
     },
+
+    headerClass: {
+      type: String,
+    },
+
+    addText: {
+      type: String,
+    },
+
+    cancelText: {
+      type: String,
+    }
   },
 
   data() {
