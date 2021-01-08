@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { capatalizeFirst } from '../Scripts/Filters';
+import { capitalizeFirst } from '../Scripts/Filters';
 import ButtonSubmit from './ButtonSubmit.vue';
 
 export default {
@@ -92,7 +92,7 @@ export default {
     },
 
     capatalize(message) {
-      return capatalizeFirst(message);
+      return capitalizeFirst(message);
     },
   },
 };

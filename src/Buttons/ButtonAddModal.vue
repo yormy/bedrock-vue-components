@@ -30,7 +30,7 @@
       <slot name="button-content">
         <span class="fal fa-plus"></span>
         <span v-if="withText">
-          {{ addText | capatalizeFirst }}
+          {{ addText | capitalizeFirst }}
         </span>
       </slot>
     </button-submit>

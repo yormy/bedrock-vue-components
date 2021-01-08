@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons/ButtonAddModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-    </list>
+    <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +55,7 @@
       <workItem from="1609425137118" duration="4748000" />
       <workItem from="1609871547662" duration="25000" />
       <workItem from="1609877268191" duration="1116000" />
-      <workItem from="1610119581374" duration="904000" />
+      <workItem from="1610119581374" duration="1188000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -154,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609425959947</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="translate buttons">
+      <created>1610120567149</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610120567149</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +172,7 @@
     <MESSAGE value="add linting" />
     <MESSAGE value="prettier reformat" />
     <MESSAGE value="fix linting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix linting" />
+    <MESSAGE value="translate buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="translate buttons" />
   </component>
 </project>
