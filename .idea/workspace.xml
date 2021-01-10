@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592795e5-b934-4248-ba48-3b88b7a3e296" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -59,7 +61,9 @@
       <workItem from="1609871547662" duration="25000" />
       <workItem from="1609877268191" duration="1116000" />
       <workItem from="1610119581374" duration="1851000" />
-      <workItem from="1610122077761" duration="1378000" />
+      <workItem from="1610122077761" duration="2253000" />
+      <workItem from="1610193636257" duration="717000" />
+      <workItem from="1610278989271" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1607098598558</created>
@@ -166,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610120848794</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update package.json">
+      <created>1610188581019</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610188581019</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +196,7 @@
     <MESSAGE value="fix linting" />
     <MESSAGE value="translate buttons" />
     <MESSAGE value="fix spelling error capatalizeFirst" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix spelling error capatalizeFirst" />
+    <MESSAGE value="update package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="update package.json" />
   </component>
 </project>
