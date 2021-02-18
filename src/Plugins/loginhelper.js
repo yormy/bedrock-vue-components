@@ -1,5 +1,5 @@
-import TunnelEncryption from './tunnel-encryption';
 import AUTH from '@config/auth';
+import TunnelEncryption from './tunnel-encryption';
 
 const ADMIN_POSTFIX = '_';
 const USER_POSTFIX = '';

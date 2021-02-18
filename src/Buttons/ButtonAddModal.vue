@@ -71,7 +71,7 @@ export default {
 
     cancelText: {
       type: String,
-    }
+    },
   },
 
   data() {

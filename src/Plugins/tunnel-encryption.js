@@ -162,7 +162,7 @@ export default class TunnelEncryption {
 
   signaturePlugins() {
     let signaturePlugins = '';
-    for (let i = 0; i < navigator.plugins.length; i++) {
+    for (let i = 0; i < navigator.plugins.length; i+=1) {
       signaturePlugins += `${navigator.plugins[i].name};`;
     }
     return signaturePlugins;

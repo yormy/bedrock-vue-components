@@ -1,7 +1,7 @@
 function getErrors(errors) {
   const returnErrors = {};
 
-  Object.keys(errors).forEach(key => {
+  Object.keys(errors).forEach((key) => {
     returnErrors[key] = errors[key].join();
   });
   return returnErrors;

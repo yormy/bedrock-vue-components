@@ -91,7 +91,7 @@ function redirectIfNeeded(error) {
   }
 }
 
-axiosApi.interceptors.request.use(config => {
+axiosApi.interceptors.request.use((config) => {
   const accessToken = getAccessToken(config);
   axiosApi.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
 
@@ -135,8 +135,8 @@ axiosApi.interceptors.request.use(config => {
 });
 
 axiosApi.interceptors.response.use(
-  response => response,
-  error => {
+  (response) => response,
+  (error) => {
     const originalRequest = error.config;
 
     redirectIfNeeded(error);
@@ -156,7 +156,7 @@ axiosApi.interceptors.response.use(
         .post(refreshTokenUrl, {
           refresh_token: refreshToken,
         })
-        .then(response => {
+        .then((response) => {
           if (response.status === 200) {
             // const encryption = new TunnelEncryption(
             //   AUTH.TUNNEL_ENCRYPTION,
