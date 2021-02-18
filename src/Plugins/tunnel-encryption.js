@@ -9,10 +9,10 @@ import { Encryption } from './encryption.js';
  * @link https://github.com/brix/crypto-js/releases crypto-js.js can be download from here.
  */
 export default class TunnelEncryption {
-  // /*eslint-disable */
-  // tunnel_encryption_secret = ''
-  // tunnel_encryption = true
-  // /* eslint-enable */
+  /*eslint-disable */
+  tunnel_encryption_secret = ''
+  tunnel_encryption = true
+  /* eslint-enable */
 
   constructor(tunnel_encryption, tunnel_encryption_secret) {
     // Constructor

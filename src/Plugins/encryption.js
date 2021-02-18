@@ -1,9 +1,9 @@
 import CryptoJS from 'crypto-js/crypto-js';
 
 export class Encryption {
-  // tunnel_encryption_secret = '';
-  //
-  // tunnel_encryption = true;
+  tunnel_encryption_secret = '';
+
+  tunnel_encryption = true;
 
   constructor(tunnel_encryption, tunnel_encryption_secret) {
     // Constructor
