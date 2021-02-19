@@ -1,31 +1,33 @@
 import CryptoJS from 'crypto-js/crypto-js';
 
-export class Encryption {
-  tunnel_encryption_secret = '';
+export default class Encryption {
+  secret = '';
 
-  tunnel_encryption = true;
+  enabled = true;
 
-  constructor(tunnel_encryption, tunnel_encryption_secret) {
+  constructor(enabled, secret) {
     // Constructor
-    this.tunnel_encryption = tunnel_encryption;
-    this.tunnel_encryption_secret = tunnel_encryption_secret;
+    this.enabled = enabled;
+    this.secret = secret;
   }
 
   encrypt(message, secret = '') {
-    if (secret === '') {
-      secret = this.tunnel_encryption_secret;
+    let secretValue = secret;
+    if (secretValue === '') {
+      secretValue = this.secret;
     }
 
-    const ciphertext = CryptoJS.AES.encrypt(message, secret).toString();
+    const ciphertext = CryptoJS.AES.encrypt(message, secretValue).toString();
     return ciphertext;
   }
 
   decrypt(message, secret = '') {
-    if (secret === '') {
-      secret = this.tunnel_encryption_secret;
+    let secretValue = secret;
+    if (secretValue === '') {
+      secretValue = this.secret;
     }
 
-    const bytes = CryptoJS.AES.decrypt(message, secret);
+    const bytes = CryptoJS.AES.decrypt(message, secretValue);
     const originalText = bytes.toString(CryptoJS.enc.Utf8);
     return originalText;
   }

@@ -21,5 +21,6 @@ export default {
       sourcemap: true,
     },
   ],
+  external: [ '@config/auth', '@config/localization'],
   plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), vue(), json()],
 };

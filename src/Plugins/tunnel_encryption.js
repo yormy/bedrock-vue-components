@@ -1,5 +1,5 @@
 import CryptoJS from 'crypto-js/crypto-js';
-import { Encryption } from './encryption.js';
+import Encryption from './encryption';
 
 /**
  * Encryption class for encrypt/decrypt that works between programming languages.
@@ -8,16 +8,15 @@ import { Encryption } from './encryption.js';
  * @link https://stackoverflow.com/questions/41222162/encrypt-in-php-openssl-and-decrypt-in-javascript-cryptojs Reference.
  * @link https://github.com/brix/crypto-js/releases crypto-js.js can be download from here.
  */
-export default class TunnelEncryption {
-  /*eslint-disable */
-  tunnel_encryption_secret = ''
-  tunnel_encryption = true
-  /* eslint-enable */
+export default class tunnelEncryption {
+  secret = '';
 
-  constructor(tunnel_encryption, tunnel_encryption_secret) {
+  enabled = true;
+
+  constructor(enabled, secret) {
     // Constructor
-    this.tunnel_encryption = tunnel_encryption;
-    this.tunnel_encryption_secret = btoa(`${tunnel_encryption_secret}utreuurty`);
+    this.enabled = tunnelEncryption;
+    this.secret = btoa(`${secret}utreuurty`);
   }
 
   /**
@@ -28,7 +27,7 @@ export default class TunnelEncryption {
     // get only number from string.
     // @link https://stackoverflow.com/a/10003709/128761 Reference.
     const aesNumber = encryptMethod.match(/\d+/)[0];
-    return parseInt(aesNumber);
+    return parseInt(aesNumber, 10);
   } // encryptMethodLength
 
   /**
@@ -36,7 +35,7 @@ export default class TunnelEncryption {
    */
   get encryptKeySize() {
     const aesNumber = this.encryptMethodLength;
-    return parseInt(aesNumber / 8);
+    return parseInt(aesNumber / 8, 10);
   } // encryptKeySize
 
   /**
@@ -60,12 +59,13 @@ export default class TunnelEncryption {
    * @return string Return decrypted string.
    */
   decrypt(encryptedString, key = null) {
-    if (!this.tunnel_encryption) {
+    if (!this.enabled) {
       return encryptedString;
     }
 
-    if (!key) {
-      key = this.tunnel_encryption_secret;
+    let keyValue = key;
+    if (!keyValue) {
+      keyValue = this.secret;
     }
 
     const json = JSON.parse(
@@ -77,12 +77,12 @@ export default class TunnelEncryption {
 
     const encrypted = json.ciphertext; // no need to base64 decode.
 
-    let iterations = parseInt(json.iterations);
+    let iterations = parseInt(json.iterations, 10);
     if (iterations <= 0) {
       iterations = 999;
     }
     const encryptMethodLength = this.encryptMethodLength / 4; // example: AES number is 256 / 4 = 64
-    const hashKey = CryptoJS.PBKDF2(key, salt, {
+    const hashKey = CryptoJS.PBKDF2(keyValue, salt, {
       hasher: CryptoJS.algo.SHA512,
       keySize: encryptMethodLength / 8,
       iterations,
@@ -106,12 +106,13 @@ export default class TunnelEncryption {
    * @return string Return encrypted string.
    */
   encrypt(string, key = null) {
-    if (!this.tunnel_encryption) {
+    if (!this.enabled) {
       return string;
     }
 
-    if (!key) {
-      key = this.tunnel_encryption_secret;
+    let keyValue = key;
+    if (!keyValue) {
+      keyValue = this.secret;
     }
 
     // the reason to be 16, please read on `encryptMethod` property.
@@ -120,7 +121,7 @@ export default class TunnelEncryption {
     const salt = CryptoJS.lib.WordArray.random(256);
     const iterations = 999;
     const encryptMethodLength = this.encryptMethodLength / 4; // example: AES number is 256 / 4 = 64
-    const hashKey = CryptoJS.PBKDF2(key, salt, {
+    const hashKey = CryptoJS.PBKDF2(keyValue, salt, {
       hasher: CryptoJS.algo.SHA512,
       keySize: encryptMethodLength / 8,
       iterations,
@@ -143,10 +144,11 @@ export default class TunnelEncryption {
   }
 
   encryptWithClientSignature(string, key = null) {
-    if (!key) {
-      key = this.tunnel_encryption_secret;
+    let keyValue = key;
+    if (!keyValue) {
+      keyValue = this.secret;
     }
-    const secret = key + this.clientSignature();
+    const secret = keyValue + this.clientSignature();
     return this.encrypt(string, secret);
   }
 
@@ -162,7 +164,7 @@ export default class TunnelEncryption {
 
   signaturePlugins() {
     let signaturePlugins = '';
-    for (let i = 0; i < navigator.plugins.length; i+=1) {
+    for (let i = 0; i < navigator.plugins.length; i += 1) {
       signaturePlugins += `${navigator.plugins[i].name};`;
     }
     return signaturePlugins;
@@ -193,14 +195,14 @@ export default class TunnelEncryption {
   }
 
   buildPostValue(plainText) {
-    if (this.tunnel_encryption) {
+    if (this.enabled) {
       return this.encryptWithClientSignature(plainText.toString());
     }
     return plainText;
   }
 
   buildPostValueHashed(plaintext) {
-    const encrypt = new Encryption(this.tunnel_encryption, this.tunnel_encryption_secret);
+    const encrypt = new Encryption(this.enabled, this.secret);
     return this.buildPostValue(encrypt.sha512(plaintext));
   }
 }

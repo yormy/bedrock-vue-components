@@ -8,7 +8,8 @@ import {
   getAccessTokenAdmin,
   getRefreshTokenAdmin,
 } from './loginhelper';
-import TunnelEncryption from './tunnel-encryption';
+
+import TunnelEncryption from './tunnel_encryption';
 
 const axiosApi = axios.create({
   baseURL: '',
@@ -97,7 +98,7 @@ axiosApi.interceptors.request.use((config) => {
 
   const authorizedConfig = { ...config };
 
-  const encryption = new TunnelEncryption(AUTH.TUNNEL_ENCRYPTION, AUTH.TUNNEL_ENCRYPTION_SECRET);
+  const encryption = new TunnelEncryption(AUTH.tunnelEncryption, AUTH.TUNNEL_ENCRYPTION_SECRET);
 
   if (authorizedConfig.data) {
     if (authorizedConfig.data.loginname) {
