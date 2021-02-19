@@ -12,8 +12,10 @@ import AppearingBullets from "./Misc/AppearingBullets.vue";
 
 // @ts-ignore
 import { doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
+
 // @ts-ignore
-import { getLocale } from "./Plugins/locale.js";
+import getLocale from "./Plugins/locale.js";
+
 // @ts-ignore
 import axios from "./Plugins/axios.js";
 

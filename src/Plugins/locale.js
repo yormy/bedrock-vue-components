@@ -19,7 +19,7 @@ function isValidLocale(locale) {
 
 // check valid locales
 // set default based on config
-export function getLocale() {
+export default function getLocale() {
   const queryLocale = getParameterByName('locale');
   if (queryLocale && isValidLocale(queryLocale)) {
     localStorage.setItem('locale', queryLocale);

@@ -2,8 +2,8 @@ resources/js/app.js
 resources/js/named-routes.js
 resources/js/bootstrap.js
 
-resources/js/components/plugins/encryption.js
-resources/js/components/plugins/tunnel-encryption.js
+src/Plugins/encryption.js
+src/Plugins/tunnel_encryption.js
 
 node_modules/*
 tests/*
