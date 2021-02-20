@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bedrock-vue-components.iml" filepath="$PROJECT_DIR$/.idea/bedrock-vue-components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bedrock-users-vue.iml" filepath="$PROJECT_DIR$/.idea/bedrock-users-vue.iml" />
     </modules>
   </component>
 </project>

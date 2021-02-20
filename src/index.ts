@@ -9,6 +9,7 @@ import ButtonSubmit from "./Buttons/ButtonSubmit.vue";
 import ButtonAddModal from "./Buttons/ButtonAddModal.vue";
 
 import AppearingBullets from "./Misc/AppearingBullets.vue";
+import EmailInput from "./Inputs/EmailInput/EmailInput.vue";
 
 // @ts-ignore
 import { doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
@@ -32,6 +33,7 @@ export {
     ButtonSubmit,
     ButtonAddModal,
     AppearingBullets,
+    EmailInput,
     doLogout, removeTokensUser, removeTokensAdmin, storeTokens,
     getLocale,
     mergeErrors,
