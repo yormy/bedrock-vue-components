@@ -19,9 +19,6 @@ import getLocale from "./Plugins/locale.js";
 // @ts-ignore
 import axios from "./Plugins/axios.js";
 
-// @ts-ignore
-import emailcheck from "./Plugins/emailcheck.js";
-
 //@ts-ignore
 import { mergeErrors, getFirstValidationError } from "./Helpers/formhelper.js";
 
@@ -40,5 +37,4 @@ export {
     mergeErrors,
     getFirstValidationError,
     axios,
-    emailcheck,
 };
