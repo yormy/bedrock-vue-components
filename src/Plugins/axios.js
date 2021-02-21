@@ -51,6 +51,7 @@ function isAdminRoute(config) {
 
   return false;
 }
+
 function getAccessToken(config) {
   if (isAdminRoute(config)) {
     return getAccessTokenAdmin();
@@ -125,6 +126,8 @@ axiosApi.interceptors.request.use((config) => {
       );
     }
   }
+
+  authorizedConfig.data.locale= localStorage.getItem('locale');
 
   // if (authorizedConfig.data && authorizedConfig.data.xid) {
   //   authorizedConfig.data.xid = encryption.buildPostValue(authorizedConfig.data.xid);
