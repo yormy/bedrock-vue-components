@@ -7,7 +7,7 @@
         autocomplete="email"
         v-model="form.email"
         append-icon="fal fa-envelope"
-        :label="$t('misc.email')"
+        :label="label"
         :hint="emailField.hint"
         :persistent-hint="emailField.persistentHint"
         :type="'email'"
@@ -75,7 +75,7 @@ export default {
       },
       skipWarnings: false,
 
-      didYouMean: 'Did you mean ',
+      didYouMean: this.$t('bedrock-core.email.did_you_mean') + " ",
     };
   },
 
@@ -92,7 +92,7 @@ export default {
   computed: {
     emailColor() {
       if (this.emailField.type === 'WARNING') {
-        return 'purple';
+        return 'orange';
       }
 
       return !this.apiErrors.email && this.form.email ? 'success' : '';
@@ -150,7 +150,7 @@ export default {
 
 <style scoped>
 ::v-deep .warning-hint .v-messages__message {
-  color: purple !important;
-  font-size: 18px;
+  color: orangered !important;
+  font-size: 12px;
 }
 </style>

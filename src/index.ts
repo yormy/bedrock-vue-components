@@ -9,6 +9,7 @@ import ButtonSubmit from "./Buttons/ButtonSubmit.vue";
 import ButtonAddModal from "./Buttons/ButtonAddModal.vue";
 
 import AppearingBullets from "./Misc/AppearingBullets.vue";
+import LocaleSwitcher from "./Misc/LocaleSwitcher.vue";
 import EmailInput from "./Inputs/EmailInput/EmailInput.vue";
 
 // @ts-ignore
@@ -22,6 +23,9 @@ import axios from "./Plugins/axios.js";
 
 //@ts-ignore
 import { mergeErrors, getFirstValidationError } from "./Helpers/formhelper.js";
+
+//@ts-ignore
+import translations from '../lang/translations';
 
 export {
     SampleComponent,
@@ -39,4 +43,6 @@ export {
     mergeErrors,
     getFirstValidationError,
     axios,
+    LocaleSwitcher,
+    translations,
 };
