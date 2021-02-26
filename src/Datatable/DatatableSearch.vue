@@ -2,7 +2,7 @@
   <v-text-field
     v-model="searchInput"
     append-icon="mdi-magnify"
-    :label="$t('misc.search')"
+    :label="$t('bedrock-core.action.search')"
     single-line
   ></v-text-field>
 </template>
