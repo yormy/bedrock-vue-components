@@ -125,9 +125,9 @@ axiosApi.interceptors.request.use((config) => {
         authorizedConfig.data.newPassword,
       );
     }
-  }
 
-  authorizedConfig.data.locale= localStorage.getItem('locale');
+    authorizedConfig.data.locale= localStorage.getItem('locale');
+  }
 
   // if (authorizedConfig.data && authorizedConfig.data.xid) {
   //   authorizedConfig.data.xid = encryption.buildPostValue(authorizedConfig.data.xid);
@@ -145,6 +145,7 @@ axiosApi.interceptors.response.use(
 
     redirectIfNeeded(error);
 
+    console.log(error);
     /*eslint-disable */
         if (error.response.status === 401 && !originalRequest._retry) {
             const request = JSON.parse(originalRequest.data);
