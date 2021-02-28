@@ -15,6 +15,9 @@ import CodeInput from "./Misc/CodeInput.vue";
 import LocaleSwitcher from "./Misc/LocaleSwitcher.vue";
 import EmailInput from "./Inputs/EmailInput/EmailInput.vue";
 
+import BaseList from "./Base/BaseList.vue";
+import ListSearchComponent from "./Base/ListSearchComponent.vue";
+
 // @ts-ignore
 import { isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
 
@@ -50,4 +53,6 @@ export {
     LocaleSwitcher,
     translations,
     SecureChange,
+    BaseList,
+    ListSearchComponent
 };
