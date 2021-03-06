@@ -51,7 +51,7 @@ export default {
         this.project.xid,
         this.toLang,
       ]);
-      const updateUrl = this.route('api.v1.user.multilingual.projects.update', this.project.xid);
+      const updateUrl = this.route('api.v1.member.multilingual.projects.update', this.project.xid);
 
       const data = {
         project_name: this.projectName,
