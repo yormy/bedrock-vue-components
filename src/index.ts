@@ -18,6 +18,8 @@ import EmailInput from "./Inputs/EmailInput/EmailInput.vue";
 import BaseList from "./Base/BaseList.vue";
 import ListSearchComponent from "./Base/ListSearchComponent.vue";
 
+import ButtonConfirmWithNote from "./Buttons/ButtonConfirmWithNote.vue";
+
 // @ts-ignore
 import { isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
 
@@ -54,5 +56,6 @@ export {
     translations,
     SecureChange,
     BaseList,
-    ListSearchComponent
+    ListSearchComponent,
+    ButtonConfirmWithNote
 };

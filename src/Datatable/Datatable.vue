@@ -27,6 +27,8 @@ export default {
           error: '',
         },
       },
+
+      valueOnClipboard : null,
     };
   },
 
@@ -40,6 +42,15 @@ export default {
   },
 
   methods: {
+    copyClipboard(value) {
+      const self = this;
+      navigator.clipboard.writeText(value).then(function() {
+        self.valueOnClipboard = value;
+      }, function(err) {
+        console.error('Could not copy text: ', err);
+      });
+    },
+
     addItemToTable(values, item) {
       this.backupTable.values = JSON.parse(JSON.stringify(values));
       values.push(item);

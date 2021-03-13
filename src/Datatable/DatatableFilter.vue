@@ -4,7 +4,7 @@
       :items="options"
       item-text="name"
       item-value="key"
-      :label="$t('misc.select')"
+      :label="$t('bedrock-core.action.select')"
       :append-icon="'fal fa-backspace'"
       @click:append="reset"
       persistent-hint
