@@ -1,6 +1,7 @@
 import SampleComponent from "./SampleComponent/SampleComponent.vue";
 import HelloComponent from "./SampleComponent/HelloComponent.vue";
 import Datatable from "./Datatable/Datatable.vue";
+import DatatableHeader from "./Datatable/DatatableHeader.vue";
 import DatatableSearch from "./Datatable/DatatableSearch.vue";
 import DatatableFilter from "./Datatable/DatatableFilter.vue";
 
@@ -39,6 +40,7 @@ export {
     SampleComponent,
     HelloComponent,
     Datatable,
+    DatatableHeader,
     DatatableSearch,
     DatatableFilter,
     ButtonDelete,

@@ -1,0 +1,12 @@
+{
+    "utc" : "UTC",
+    "user_agent" : "browser",
+    "created_at" : "created at",
+    "date" : "Date",
+    "ip": "IP",
+    "since" : "Since",
+    "disable" : "Disable",
+    "enable" : "Enable",
+    "cancel" : "Cancel",
+    "delete" : "Delete"
+}

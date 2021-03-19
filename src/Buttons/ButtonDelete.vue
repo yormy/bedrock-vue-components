@@ -3,7 +3,7 @@
     <v-dialog v-model="deleteModal" max-width="290">
       <v-card>
         <slot name="modal">
-          <v-card-title class="red headline">{{ capatalize($t('actions.delete')) }}</v-card-title>
+          <v-card-title class="red headline">{{ title }}</v-card-title>
 
           <v-card-text>
             <slot name="delete-preview"></slot>
@@ -14,11 +14,11 @@
           <v-spacer></v-spacer>
 
           <v-btn color="green darken-1" text @click="doCancelled">
-            {{ capatalize($t('misc.cancel')) }}
+            {{ $t('bedrock-core.general.cancel') }}
           </v-btn>
 
           <v-btn color="red darken-1" text @click="doAgreed">
-            {{ capatalize($t('misc.delete')) }}
+            {{ confirmButton }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -27,14 +27,13 @@
     <button-submit :is-loading="isLoading" @clicked="askConfirmation" :btnClass="btnClass">
       <slot name="button-content">
         <span class="fal fa-fw fa-trash"></span>
-        <span v-if="showText">{{ capatalize($t('misc.delete')) }}</span>
+        <span v-if="showText">{{ $t('bedrock-core.general.delete') }}</span>
       </slot>
     </button-submit>
   </div>
 </template>
 
 <script>
-import { capitalizeFirst } from '../Scripts/Filters';
 import ButtonSubmit from './ButtonSubmit.vue';
 
 export default {
@@ -46,6 +45,16 @@ export default {
     item: {
       type: Object,
       required: true,
+    },
+
+    titleText: {
+      type: String,
+      required: false,
+    },
+
+    confirmButtonText: {
+      type: String,
+      required: false,
     },
 
     iconAppend: {
@@ -74,6 +83,9 @@ export default {
   data() {
     return {
       deleteModal: false,
+
+      title : this.titleText ? this.titleText : this.$t('bedrock-core.general.delete'),
+      confirmButton : this.confirmButtonText ? this.confirmButtonText : this.$t('bedrock-core.general.delete'),
     };
   },
 
@@ -91,9 +103,6 @@ export default {
       this.$emit('deleteItem', this.item);
     },
 
-    capatalize(message) {
-      return capitalizeFirst(message);
-    },
   },
 };
 </script>
