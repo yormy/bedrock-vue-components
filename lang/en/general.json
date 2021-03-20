@@ -4,9 +4,14 @@
     "created_at" : "created at",
     "date" : "Date",
     "ip": "IP",
+    "ip_address": "IP Address",
     "since" : "Since",
     "disable" : "Disable",
     "enable" : "Enable",
     "cancel" : "Cancel",
-    "delete" : "Delete"
+    "delete" : "Delete",
+    "email": "Email",
+    "comment" : "Comment",
+    "user" : "User",
+    "name" : "Name"
 }

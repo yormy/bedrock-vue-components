@@ -3,9 +3,11 @@
     <v-dialog v-model="deleteModal" max-width="290">
       <v-card>
         <slot name="modal">
-          <v-card-title class="red headline">{{ title }}</v-card-title>
+          <v-card-title class="red headline">{{ headerText }}</v-card-title>
 
           <v-card-text>
+            <h3>{{ title }} </h3>
+            <p>{{ description }}</p>
             <slot name="delete-preview"></slot>
           </v-card-text>
         </slot>
@@ -18,7 +20,7 @@
           </v-btn>
 
           <v-btn color="red darken-1" text @click="doAgreed">
-            {{ confirmButton }}
+            {{ confirmButtonText }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -42,17 +44,27 @@ export default {
   },
 
   props: {
+    header: {
+      type: String,
+      required: false,
+    },
+
+    title: {
+      type: String,
+      required: false,
+    },
+
+    description: {
+      type: String,
+      required: false,
+    },
+
     item: {
       type: Object,
       required: true,
     },
 
-    titleText: {
-      type: String,
-      required: false,
-    },
-
-    confirmButtonText: {
+    confirmButton: {
       type: String,
       required: false,
     },
@@ -84,8 +96,8 @@ export default {
     return {
       deleteModal: false,
 
-      title : this.titleText ? this.titleText : this.$t('bedrock-core.general.delete'),
-      confirmButton : this.confirmButtonText ? this.confirmButtonText : this.$t('bedrock-core.general.delete'),
+      headerText : this.header ? this.header : this.$t('bedrock-core.general.delete'),
+      confirmButtonText : this.confirmButton ? this.confirmButton : this.$t('bedrock-core.general.delete'),
     };
   },
 

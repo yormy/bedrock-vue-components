@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-dialog v-model="addModal" max-width="290">
+    <v-dialog v-model="addModal" width="auto ">
       <v-card>
         <slot name="modal">
-          <v-card-title class="headline" :class="headerClass">
-            <slot name="header"></slot>
-          </v-card-title>
+          <v-card-title class="green headline" :class="headerClass">{{ headerText }}</v-card-title>
 
           <v-card-text>
+            <h3>{{ title }} </h3>
+            <p>{{ description }}</p>
             <slot name="form"></slot>
           </v-card-text>
         </slot>
@@ -16,11 +16,11 @@
           <v-spacer></v-spacer>
 
           <v-btn color="green darken-1" text @click="doCancelled">
-            {{ cancelText }}
+            {{ $t('bedrock-core.general.cancel') }}
           </v-btn>
 
           <v-btn color="green darken-1" text @click="doAddItem">
-            {{ addText }}
+            {{ confirmButtonText }}
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -30,7 +30,7 @@
       <slot name="button-content">
         <span class="fal fa-plus"></span>
         <span v-if="withText">
-          {{ addText | capitalizeFirst }}
+          {{ confirmButtonText }}
         </span>
       </slot>
     </button-submit>
@@ -40,6 +40,24 @@
 <script>
 export default {
   props: {
+    header: {
+      type: String,
+      required: false,
+    },
+
+    title: {
+      type: String,
+      required: false,
+    },
+
+    description: {
+      type: String,
+      required: false,
+    },
+
+
+
+
     iconAppend: {
       type: String,
     },
@@ -65,18 +83,17 @@ export default {
       type: String,
     },
 
-    addText: {
+    confirmButton: {
       type: String,
-    },
-
-    cancelText: {
-      type: String,
+      required: false,
     },
   },
 
   data() {
     return {
       addModal: false,
+      headerText : this.header ? this.header : this.$t('bedrock-core.action.add'),
+      confirmButtonText : this.confirmButton ? this.confirmButton : this.$t('bedrock-core.action.add'),
     };
   },
 
@@ -96,5 +113,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

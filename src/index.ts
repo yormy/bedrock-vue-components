@@ -2,6 +2,7 @@ import SampleComponent from "./SampleComponent/SampleComponent.vue";
 import HelloComponent from "./SampleComponent/HelloComponent.vue";
 import Datatable from "./Datatable/Datatable.vue";
 import DatatableHeader from "./Datatable/DatatableHeader.vue";
+import DatatableFooter from "./Datatable/DatatableFooter.vue";
 import DatatableSearch from "./Datatable/DatatableSearch.vue";
 import DatatableFilter from "./Datatable/DatatableFilter.vue";
 
@@ -20,6 +21,9 @@ import BaseList from "./Base/BaseList.vue";
 import ListSearchComponent from "./Base/ListSearchComponent.vue";
 
 import ButtonConfirmWithNote from "./Buttons/ButtonConfirmWithNote.vue";
+import PageHeader from "./Pages/PageHeader.vue";
+import CardHeader from "./Pages/CardHeader.vue";
+import CardFooter from "./Pages/CardFooter.vue";
 
 // @ts-ignore
 import { isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
@@ -41,6 +45,7 @@ export {
     HelloComponent,
     Datatable,
     DatatableHeader,
+    DatatableFooter,
     DatatableSearch,
     DatatableFilter,
     ButtonDelete,
@@ -59,5 +64,8 @@ export {
     SecureChange,
     BaseList,
     ListSearchComponent,
-    ButtonConfirmWithNote
+    ButtonConfirmWithNote,
+    PageHeader,
+    CardHeader,
+    CardFooter
 };

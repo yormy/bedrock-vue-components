@@ -8,6 +8,7 @@ import log_activities from './log_activities.json';
 import audit from './audit.json';
 import general from './general.json';
 import firewall from './firewall.json';
+import sent_emails from './sent_emails.json';
 
 export default {
   general,
@@ -19,5 +20,6 @@ export default {
   dashboard,
   log_activities,
   audit,
-  firewall
+  firewall,
+  sent_emails
 };

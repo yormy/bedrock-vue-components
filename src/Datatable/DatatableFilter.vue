@@ -5,7 +5,8 @@
       item-text="name"
       item-value="key"
       :label="$t('bedrock-core.action.select')"
-      :append-icon="'fal fa-backspace'"
+      :clear-icon="'fal fa-xs fa-times'"
+      clearable
       @click:append="reset"
       persistent-hint
       return-object
