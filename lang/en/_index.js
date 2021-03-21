@@ -10,6 +10,7 @@ import general from './general.json';
 import firewall from './firewall.json';
 import sent_emails from './sent_emails.json';
 import performance from './performance.json';
+import server_log from './server_log.json';
 
 export default {
   general,
@@ -23,5 +24,6 @@ export default {
   audit,
   firewall,
   sent_emails,
-  performance
+  performance,
+  server_log
 };
