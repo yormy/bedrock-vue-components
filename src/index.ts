@@ -25,6 +25,10 @@ import PageHeader from "./Pages/PageHeader.vue";
 import CardHeader from "./Pages/CardHeader.vue";
 import CardFooter from "./Pages/CardFooter.vue";
 
+import DatePopup from "./Inputs/DatePopup.vue";
+
+import PerformancePage from "./Pages/PerformancePage.vue";
+
 // @ts-ignore
 import { isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
 
@@ -67,5 +71,7 @@ export {
     ButtonConfirmWithNote,
     PageHeader,
     CardHeader,
-    CardFooter
+    CardFooter,
+    PerformancePage,
+    DatePopup,
 };

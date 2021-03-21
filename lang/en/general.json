@@ -13,5 +13,9 @@
     "email": "Email",
     "comment" : "Comment",
     "user" : "User",
-    "name" : "Name"
+    "name" : "Name",
+    "description" : "description",
+    "count" : "Count",
+    "until" : "until",
+    "filter" : "Filter"
 }
