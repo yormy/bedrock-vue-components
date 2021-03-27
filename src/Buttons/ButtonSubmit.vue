@@ -41,7 +41,7 @@ export default {
 
     btnClass: {
       type: String,
-      default: 'btn btn-success',
+      default: 'btn btn-primary',
     },
 
     disabled: {
