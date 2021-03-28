@@ -1,9 +1,8 @@
 <template>
   <div>
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
+      <div class="nav-item dropdown">
         <a
-          class="nav-link dropdown-toggle"
+          class="nav-link dropdown-toggle px-0"
           href="#"
           id="navbarDropdown2"
           role="button"
@@ -13,7 +12,7 @@
         >
           <i class="flag-icon" :class="flagIcon"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="navbarDropdown2">
           <a v-if="locale !== 'en'" class="dropdown-item" href="?locale=en"
             ><i class="flag-icon flag-icon-us"></i> English</a
           >
@@ -24,8 +23,7 @@
             ><i class="flag-icon flag-icon-de"></i> Deutsch</a
           >
         </div>
-      </li>
-    </ul>
+      </div>
   </div>
 </template>
 
