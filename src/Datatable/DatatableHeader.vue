@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between">
     <div>
       <div class="table_title">{{title}}</div>
-      <div v-if="subtitle" class="table_subtitle">{{subtitle}}</div>
+      <div v-if="subtitle" class="table_subtitle" v-html="subtitle"></div>
     </div>
     <div>
       <div v-if="messages && messages.success" class="table_message success">

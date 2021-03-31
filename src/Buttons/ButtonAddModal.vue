@@ -7,7 +7,7 @@
 
           <v-card-text>
             <h3>{{ title }} </h3>
-            <p>{{ description }}</p>
+            <p v-if="description" v-html="description"></p>
             <slot name="form"></slot>
           </v-card-text>
         </slot>
@@ -55,9 +55,6 @@ export default {
       required: false,
     },
 
-
-
-
     iconAppend: {
       type: String,
     },
@@ -87,14 +84,23 @@ export default {
       type: String,
       required: false,
     },
+
+    reShowModal: false,
   },
 
   data() {
     return {
       addModal: false,
-      headerText : this.header ? this.header : this.$t('bedrock-core.action.add'),
-      confirmButtonText : this.confirmButton ? this.confirmButton : this.$t('bedrock-core.action.add'),
+      headerText: this.header ? this.header : this.$t('bedrock-core.action.add'),
+      confirmButtonText: this.confirmButton ? this.confirmButton : this.$t('bedrock-core.action.add'),
     };
+  },
+
+  watch: {
+    reShowModal() {
+      this.addModal = true;
+      console.log('reshow');
+    }
   },
 
   methods: {
