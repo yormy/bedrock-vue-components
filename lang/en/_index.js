@@ -12,6 +12,7 @@ import sent_emails from './sent_emails.json';
 import performance from './performance.json';
 import server_log from './server_log.json';
 import blacklisted_ip from './blacklisted_ip.json';
+import action_tarpit from './action_tarpit.json';
 
 export default {
   general,
@@ -27,5 +28,6 @@ export default {
   sent_emails,
   performance,
   server_log,
-  blacklisted_ip
+  blacklisted_ip,
+  action_tarpit
 };
