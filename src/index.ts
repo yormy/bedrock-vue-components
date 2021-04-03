@@ -30,6 +30,8 @@ import DatePopup from "./Inputs/DatePopup.vue";
 
 import PerformancePage from "./Pages/PerformancePage.vue";
 
+import BlacklistedIps from "./Security/BlacklistedIps.vue";
+
 // @ts-ignore
 import {
   doLogout,
@@ -72,14 +74,15 @@ export {
   getFirstValidationError,
   axios,
     LocaleSwitcher,
-    translations,
-    SecureChange,
-    BaseList,
-    ListSearchComponent,
-    ButtonConfirmWithNote,
-    PageHeader,
-    CardHeader,
-    CardFooter,
-    PerformancePage,
-    DatePopup,
+  translations,
+  SecureChange,
+  BaseList,
+  ListSearchComponent,
+  ButtonConfirmWithNote,
+  PageHeader,
+  CardHeader,
+  CardFooter,
+  PerformancePage,
+  DatePopup,
+  BlacklistedIps,
 };

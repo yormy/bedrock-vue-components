@@ -11,6 +11,7 @@ import firewall from './firewall.json';
 import sent_emails from './sent_emails.json';
 import performance from './performance.json';
 import server_log from './server_log.json';
+import blacklisted_ip from './blacklisted_ip.json';
 
 export default {
   general,
@@ -25,5 +26,6 @@ export default {
   firewall,
   sent_emails,
   performance,
-  server_log
+  server_log,
+  blacklisted_ip
 };
