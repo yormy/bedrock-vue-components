@@ -11,6 +11,9 @@ export function mergeErrors(error) {
   let validation = {};
   let input = {};
   let message = '';
+  if (error.message) {
+    message = error.message;
+  }
   if (error.response) {
     if (error.response.data) {
       if (error.response.data.message) {
