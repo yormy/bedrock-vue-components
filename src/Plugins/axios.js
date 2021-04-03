@@ -2,11 +2,11 @@ import axios from 'axios';
 import AUTH from '@config/auth';
 
 import {
-  storeTokens,
-  getAccessTokenUser,
-  getRefreshTokenUser,
   getAccessTokenAdmin,
+  getAccessTokenUser,
   getRefreshTokenAdmin,
+  getRefreshTokenUser,
+  storeTokens,
 } from './loginhelper';
 
 import TunnelEncryption from './tunnel_encryption';
@@ -145,39 +145,47 @@ axiosApi.interceptors.response.use(
 
     redirectIfNeeded(error);
 
-    console.log(error);
-    /*eslint-disable */
-        if (error.response.status === 401 && !originalRequest._retry) {
-            const request = JSON.parse(originalRequest.data);
-            if (request.skipRetry) {
-                return Promise.reject(error);
-            }
-            originalRequest._retry = true;
-          /* eslint-enable */
-      const refreshTokenUrl = getRefreshTokenUrl(error);
-      const refreshToken = `${getRefreshToken(error)}`;
-
-      return axiosApi
-        .post(refreshTokenUrl, {
-          refresh_token: refreshToken,
-        })
-        .then((response) => {
-          if (response.status === 200) {
-            // const encryption = new TunnelEncryption(
-            //   AUTH.TUNNEL_ENCRYPTION,
-            //   AUTH.TUNNEL_ENCRYPTION_SECRET,
-            // );
-
-            doStoreTokens(originalRequest, response.data.data);
-            const newAccessToken = getAccessToken(originalRequest);
-            originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-            return axiosApi(originalRequest);
-          }
-          return Promise.reject(error);
-        });
-    }
-    // return Error object with Promise
     return Promise.reject(error);
+    //
+    // console.log('ax', error);
+    // /*eslint-disable */
+    //     if (error.response.status === 401 && originalRequest.data && !originalRequest._retry) {
+    //         const request = JSON.parse(originalRequest.data);
+    //
+    //
+    //       return Promise.reject(error);
+    //
+    //
+    //
+    //         if (request.skipRetry) {
+    //             return Promise.reject(error);
+    //         }
+    //         originalRequest._retry = true;
+    //       /* eslint-enable */
+    //   const refreshTokenUrl = getRefreshTokenUrl(error);
+    //   const refreshToken = `${getRefreshToken(error)}`;
+    //
+    //   return axiosApi
+    //     .post(refreshTokenUrl, {
+    //       refresh_token: refreshToken,
+    //     })
+    //     .then((response) => {
+    //       if (response.status === 200) {
+    //         // const encryption = new TunnelEncryption(
+    //         //   AUTH.TUNNEL_ENCRYPTION,
+    //         //   AUTH.TUNNEL_ENCRYPTION_SECRET,
+    //         // );
+    //
+    //         doStoreTokens(originalRequest, response.data.data);
+    //         const newAccessToken = getAccessToken(originalRequest);
+    //         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+    //         return axiosApi(originalRequest);
+    //       }
+    //       return Promise.reject(error);
+    //     });
+    // }
+    // // return Error object with Promise
+    // return Promise.reject(error);
   },
 );
 // @ts-ignore
