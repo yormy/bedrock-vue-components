@@ -7,6 +7,7 @@ import DatatableSearch from "./Datatable/DatatableSearch.vue";
 import DatatableFilter from "./Datatable/DatatableFilter.vue";
 
 import ButtonDelete from "./Buttons/ButtonDelete.vue";
+import ButtonConfirmModal from "./Buttons/ButtonConfirmModal.vue";
 import ButtonSubmit from "./Buttons/ButtonSubmit.vue";
 import ButtonAddModal from "./Buttons/ButtonAddModal.vue";
 
@@ -30,7 +31,13 @@ import DatePopup from "./Inputs/DatePopup.vue";
 import PerformancePage from "./Pages/PerformancePage.vue";
 
 // @ts-ignore
-import { isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens } from "./Plugins/loginhelper.js";
+import {
+  doLogout,
+  isLoggedIn,
+  removeTokensAdmin,
+  removeTokensUser,
+  storeTokens
+} from "./Plugins/loginhelper.js";
 
 // @ts-ignore
 import getLocale from "./Plugins/locale.js";
@@ -39,30 +46,31 @@ import getLocale from "./Plugins/locale.js";
 import axios from "./Plugins/axios.js";
 
 //@ts-ignore
-import { mergeErrors, getFirstValidationError} from "./Helpers/formhelper.js";
+import {getFirstValidationError, mergeErrors} from "./Helpers/formhelper.js";
 
 //@ts-ignore
 import translations from '../lang/translations';
 
 export {
-    SampleComponent,
-    HelloComponent,
-    Datatable,
-    DatatableHeader,
-    DatatableFooter,
-    DatatableSearch,
-    DatatableFilter,
-    ButtonDelete,
-    ButtonSubmit,
-    ButtonAddModal,
-    AppearingBullets,
-    CodeInput,
-    EmailInput,
-    isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens,
-    getLocale,
-    mergeErrors,
-    getFirstValidationError,
-    axios,
+  SampleComponent,
+  HelloComponent,
+  Datatable,
+  DatatableHeader,
+  DatatableFooter,
+  DatatableSearch,
+  DatatableFilter,
+  ButtonDelete,
+  ButtonConfirmModal,
+  ButtonSubmit,
+  ButtonAddModal,
+  AppearingBullets,
+  CodeInput,
+  EmailInput,
+  isLoggedIn, doLogout, removeTokensUser, removeTokensAdmin, storeTokens,
+  getLocale,
+  mergeErrors,
+  getFirstValidationError,
+  axios,
     LocaleSwitcher,
     translations,
     SecureChange,

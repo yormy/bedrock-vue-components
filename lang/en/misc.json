@@ -170,6 +170,5 @@
         "token_tips" : "To add a button type link: [[button:click here,http://example.com]]"
     },
     "difference" : "difference",
-    "auditable" : "Auditable",
     "ip_address" : "IP Address"
 }

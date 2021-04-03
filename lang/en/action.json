@@ -1,9 +1,13 @@
 {
-    "search" : "Search",
-    "select" : "Select",
-    "delete" : "Delete",
-    "add" : "Add",
-    "ok" : "OK",
-    "close" : "Close",
-    "send": "Send"
+    "activate": "Activate",
+    "add": "Add",
+    "close": "Close",
+    "copy": "Copy",
+    "delete": "Delete",
+    "edit": "Edit",
+    "ok": "OK",
+    "search": "Search",
+    "select": "Select",
+    "send": "Send",
+    "view": "View"
 }
