@@ -31,6 +31,7 @@ import DatePopup from "./Inputs/DatePopup.vue";
 import PerformancePage from "./Pages/PerformancePage.vue";
 
 import BlacklistedIps from "./Security/BlacklistedIps.vue";
+import ActionTarpits from "./Security/ActionTarpits.vue";
 
 // @ts-ignore
 import {
@@ -85,4 +86,5 @@ export {
   PerformancePage,
   DatePopup,
   BlacklistedIps,
+  ActionTarpits,
 };

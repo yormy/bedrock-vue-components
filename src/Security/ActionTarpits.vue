@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import Datatable from '../Datatable/Datatable.vue';
 import DatatableHeader from '../Datatable/DatatableHeader.vue';
 import DatatableSearch from '../Datatable/DatatableSearch.vue';
 
